@@ -1,205 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ABC Technologies - Employee Registration</title>
-
-<style>
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url('company_bg.jpg');
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-}
-
-/* Main Wrapper */
-.wrapper{
-    background: rgba(0,0,0,0.5);
-    padding: 40px 0;
-}
-
-/* Card */
-.container{
-    width: 550px;
-    margin: auto;
-    background: white;
-    border-radius: 14px;
-    padding: 25px 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
-
-/* Header */
-.header{
-    text-align: center;
-}
-
-.header img{
-    width: 90px;
-}
-
-.company-name{
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 5px;
-    color:#1f2d5a;
-}
-
-.subtitle{
-    color: gray;
-    font-size: 14px;
-}
-
-/* Section Blocks */
-.section{
-    background:#f4f6ff;
-    border-left: 5px solid #3f51b5;
-    padding: 12px;
-    margin-top: 18px;
-    border-radius: 8px;
-    font-weight: bold;
-    color:#1f2d5a;
-}
-
-/* Inputs */
-label{
-    font-weight: bold;
-}
-
-input,
-textarea,
-select{
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid gray;
-}
-
-/* Row Layout */
-.row{
-    display: flex;
-    gap: 10px;
-}
-
-.row div{
-    width: 100%;
-}
-
-/* Radio */
-.radio-group{
-    margin-bottom: 15px;
-}
-
-/* Button */
-.submit-btn{
-    width: 100%;
-    background: #3f51b5;
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.submit-btn:hover{
-    background:#2c3e92;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bean Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<div class="wrapper">
-
-<div class="container">
-
-    <!-- Company Header -->
-    <div class="header">
-        <img src="company_logo.png" alt="Company Logo">
-        <div class="company-name">ABC TECHNOLOGIES PVT LTD</div>
-        <p class="subtitle">Employee Registration Portal</p>
-    </div>
-
-    <form>
-
-        <!-- Personal Info -->
-        <!-- gm -->
-        <div class="section">Personal Information</div>
-
-        <div class="row">
-            <div>
-                <label>First Name</label>
-                <input type="text" style="width: 250px;" required>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Brew & Bean</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero-coffee.jpg" alt="Coffee cup" class="hero-img">
+            <div class="hero-text">
+                <h1>Welcome to Brew & Bean</h1>
+                <p>Your cozy corner for the perfect cup.</p>
             </div>
-
-            <div>
-                <label>Last Name</label>
-                <input type="text" required>
+        </section>
+        <section class="highlight">
+            <h2>Popular Picks</h2>
+            <div class="popular-items">
+                <div class="item">
+                    <img src="images/espresso.jpg" alt="Espresso">
+                    <h3>Espresso</h3>
+                </div>
+                <div class="item">
+                    <img src="images/cappuccino.jpg" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                </div>
+                <div class="item">
+                    <img src="images/croissant.jpg" alt="Croissant">
+                    <h3>Fresh Croissant</h3>
+                </div>
             </div>
-        </div>
-
-        <label>Date of Birth</label>
-        <input type="date" required>
-
-        <label>Gender</label>
-        <div class="radio-group">
-            <input type="radio" name="gender"> Male
-            <input type="radio" name="gender"> Female
-            <input type="radio" name="gender"> Other
-        </div>
-
-        <!-- Work Info -->
-        <div class="section">Work Information</div>
-
-        <label>Designation</label>
-        <select required>
-            <option>Select</option>
-            <option>Manager</option>
-            <option>Developer</option>
-            <option>Analyst</option>
-            <option>Engineer</option>
-        </select>
-
-        <label>Department</label>
-        <select>
-            <option>Select</option>
-            <option>HR</option>
-            <option>IT</option>
-            <option>Finance</option>
-            <option>Operations</option>
-        </select>
-
-        <!-- Contact Info -->
-        <div class="section">Contact Details</div>
-
-        <label>Email</label>
-        <input type="email" required>
-
-        <label>Phone Number</label>
-        <input type="tel" required>
-
-        <label>Address</label>
-        <textarea rows="3"></textarea>
-
-        <!-- Upload -->
-        <div class="section">Documents Upload</div>
-
-        <label>Upload Photo</label>
-        <input type="file" accept="image/*">
-
-        <button class="submit-btn" type="submit">Submit Registration</button>
-
-    </form>
-
-</div>
-
-</div>
-
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Brew & Bean Coffee Shop. All rights reserved.</p>
+    </footer>
 </body>
 </html>
