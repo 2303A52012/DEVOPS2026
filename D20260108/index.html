@@ -1,172 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Registration Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC Technologies - Employee Registration</title>
 
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: url('background.jpg');
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        .container{
-            width: 500px;
-            margin: 40px auto;
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('company_bg.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
 
-        h1{
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
+/* Main Wrapper */
+.wrapper{
+    background: rgba(0,0,0,0.5);
+    padding: 40px 0;
+}
 
-        .subtitle{
-            text-align: center;
-            color: gray;
-            margin-bottom: 20px;
-        }
+/* Card */
+.container{
+    width: 550px;
+    margin: auto;
+    background: white;
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
 
-        .profile{
-            text-align: center;
-        }
+/* Header */
+.header{
+    text-align: center;
+}
 
-        .profile img{
-            width: 90px;
-            margin-bottom: 10px;
-        }
+.header img{
+    width: 90px;
+}
 
-        form label{
-            font-weight: bold;
-        }
+.company-name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    color:#1f2d5a;
+}
 
-        form input, 
-        form select,
-        form textarea{
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            border: 1px solid gray;
-        }
+.subtitle{
+    color: gray;
+    font-size: 14px;
+}
 
-        .radio-group{
-            margin-bottom: 15px;
-        }
+/* Section Blocks */
+.section{
+    background:#f4f6ff;
+    border-left: 5px solid #3f51b5;
+    padding: 12px;
+    margin-top: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    color:#1f2d5a;
+}
 
-        .radio-group label{
-            font-weight: normal;
-            margin-right: 10px;
-        }
+/* Inputs */
+label{
+    font-weight: bold;
+}
 
-        .row{
-            display: flex;
-            gap: 10px;
-        }
+input,
+textarea,
+select{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
 
-        .row div{
-            width: 100%;
-        }
+/* Row Layout */
+.row{
+    display: flex;
+    gap: 10px;
+}
 
-        .submit-btn{
-            width: 100%;
-            background: #4364f7;
-            color: white;
-            border: none;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+.row div{
+    width: 100%;
+}
 
-        .submit-btn:hover{
-            background:#2d4ede;
-        }
-    </style>
+/* Radio */
+.radio-group{
+    margin-bottom: 15px;
+}
+
+/* Button */
+.submit-btn{
+    width: 100%;
+    background: #3f51b5;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background:#2c3e92;
+}
+
+</style>
 </head>
+
 <body>
 
-    <div class="container">
+<div class="wrapper">
 
-        <h1>Employee Registration</h1>
-        <p class="subtitle">Please fill in the details carefully</p>
+<div class="container">
 
-        <div class="profile">
-            <img src="emp.png" alt="Employee Logo">
+    <!-- Company Header -->
+    <div class="header">
+        <img src="company_logo.png" alt="Company Logo">
+        <div class="company-name">ABC TECHNOLOGIES PVT LTD</div>
+        <p class="subtitle">Employee Registration Portal</p>
+    </div>
+
+    <form>
+
+        <!-- Personal Info -->
+        <div class="section">Personal Information</div>
+
+        <div class="row">
+            <div>
+                <label>First Name</label>
+                <input type="text" style="width: 250px;" required>
+            </div>
+
+            <div>
+                <label>Last Name</label>
+                <input type="text" required>
+            </div>
         </div>
 
-        <form>
+        <label>Date of Birth</label>
+        <input type="date" required>
 
-            <div class="row">
-                <div>
-                    <label for="firstname">First Name</label>
-                    <input type="text" id="firstname"  style="width: 250px;">
-                </div>
+        <label>Gender</label>
+        <div class="radio-group">
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
 
-                <div>
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" required>
-                </div>
-            </div>
+        <!-- Work Info -->
+        <div class="section">Work Information</div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" required>
+        <label>Designation</label>
+        <select required>
+            <option>Select</option>
+            <option>Manager</option>
+            <option>Developer</option>
+            <option>Analyst</option>
+            <option>Engineer</option>
+        </select>
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" required>
+        <label>Department</label>
+        <select>
+            <option>Select</option>
+            <option>HR</option>
+            <option>IT</option>
+            <option>Finance</option>
+            <option>Operations</option>
+        </select>
 
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" required>
+        <!-- Contact Info -->
+        <div class="section">Contact Details</div>
 
-            <label>Gender</label>
-            <div class="radio-group">
-                <input type="radio" id="male" name="gender">
-                <label for="male">Male</label>
+        <label>Email</label>
+        <input type="email" required>
 
-                <input type="radio" id="female" name="gender">
-                <label for="female">Female</label>
+        <label>Phone Number</label>
+        <input type="tel" required>
 
-                <input type="radio" id="other" name="gender">
-                <label for="other">Other</label>
-            </div>
+        <label>Address</label>
+        <textarea rows="3"></textarea>
 
-            <label for="designation">Designation</label>
-            <select id="designation" required>
-                <option value="">Select</option>
-                <option>Manager</option>
-                <option>Developer</option>
-                <option>Analyst</option>
-                <option>Engineer</option>
-            </select>
+        <!-- Upload -->
+        <div class="section">Documents Upload</div>
 
-            <label for="department">Department</label>
-            <select id="department">
-                <option value="">Select</option>
-                <option>HR</option>
-                <option>IT</option>
-                <option>Finance</option>
-                <option>Operations</option>
-            </select>
+        <label>Upload Photo</label>
+        <input type="file" accept="image/*">
 
-            <label for="address">Address</label>
-            <textarea id="address" rows="3"></textarea>
+        <button class="submit-btn" type="submit">Submit Registration</button>
 
-            <label for="image">Upload Photo</label>
-            <input type="file" id="image" accept="image/*">
+    </form>
 
-            <button class="submit-btn" type="submit">Register</button>
+</div>
 
-        </form>
-    </div>
+</div>
 
 </body>
 </html>
